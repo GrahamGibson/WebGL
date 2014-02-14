@@ -1,1 +1,26 @@
-A collection of WebGL classes and functions
+A collection of WebGL classes and functions.
+
+Usage:
+
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> <!-- jQuery -->
+	<script src="QuoJS/quo.js"></script> <!-- QuoJS - Swipe and click -->
+	<script src="https://rawgithub.com/mrdoob/three.js/master/build/three.js"></script> <!-- Three.js -->
+	<script src="GLGpopup.js"></script> <!-- G L G pop-up -->
+	<script src="GLGwebGL.js"></script><!-- G L G WebGL 3D canvas -->
+</head>
+
+
+<body>
+	<script>
+		var testScene = new GLG3Dcanvas("canvas3Ddiv");
+		testScene.setMarker("off");
+		
+		/* Add objects to scene */
+		testScene.addToScene(testScene.addControls( testScene.createCube()));
+		testScene.addToScene(testScene.addControls( testScene.createTriangle()));
+
+		/* Start rendering */		
+		testScene.startRendering();
+	</script>
+</body>
